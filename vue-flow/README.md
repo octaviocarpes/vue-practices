@@ -1,4 +1,7 @@
 # vue-flow
+This POC is used to practice the <a href="https://flow.org/en/">Flow.js</a> lib with Vue.
+
+Created with the help of this <a href="https://alligator.io/vuejs/components-flow/">post</a>
 
 Starting from vue-cli’s webpack-simple template, there are nine extra dependencies to install. Here’s what each of them does:
 
@@ -23,6 +26,7 @@ Starting from vue-cli’s webpack-simple template, there are nine extra dependen
 <ul>
   <li>flow-bin - The Flow typechecker.</li>
 </ul>
+
 ## Project setup
 ```
 yarn install
