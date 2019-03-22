@@ -7,12 +7,12 @@ import VueAxios from "vue-axios";
 
 Vue.config.productionTip = false;
 
+Vue.use(VueAxios, axios);
+
 const app = new Vue({
   router,
   store,
   render: h => h(App)
 });
-
-Vue.use(VueAxios, axios);
 
 app.$mount("#app");

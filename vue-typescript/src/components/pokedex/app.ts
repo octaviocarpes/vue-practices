@@ -1,20 +1,31 @@
 import Vue from 'vue'
+import EventBus from "@/EventBus"
 export default Vue.extend({
 
   name: "Pokedex",
 
   data () {
-    const name: String = ""
-    const src: String = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
+    let pokemons: Array<Object> = []
 
     return {
-      name,
-      src
+      pokemons
     }
   },
 
-  mounted () {
-    this.name = "Pikachu"
+  created (): void {
+    EventBus.$on("POKEMONS", (data: any) => {
+      this.setPokemons(data)
+    })
+  },
+
+  mounted (): void {
+    this.$store.dispatch('FETCH_POKEMONS')
+  },
+
+  methods: {
+    setPokemons (data: Array<Object>): void {
+      this.pokemons = data
+    }
   }
 
 })

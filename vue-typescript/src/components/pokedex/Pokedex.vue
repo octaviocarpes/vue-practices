@@ -2,10 +2,7 @@
   .pokedex
     h2 Pokédex
     .pokedex-display
-      .pokemon-img
-        img(:src="src")
-        p.
-          {{ name }}
+      p(v-for="pokemon in pokemons") {{ pokemon.name.toUpperCase() }}
 </template>
 
 <script lang="ts" src="./app">
