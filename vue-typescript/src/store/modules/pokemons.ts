@@ -25,7 +25,7 @@ const actions = {
   }
 }
 
-const plugin = (store: any) => {
+const plugin = (store: any): void => {
   store.subscribe((mutation: any) => {
     const { data } = mutation.payload
     if (mutation.type === 'SET_POKEMONS') {
